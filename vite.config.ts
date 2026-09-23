@@ -16,7 +16,6 @@ export default defineConfig({
     allowedHosts: ["niobous-angelica-mustily.ngrok-free.dev"],
   },
   build: {
-    minify: "esbuild",
     sourcemap: false,
     rollupOptions: {
       treeshake: true,
