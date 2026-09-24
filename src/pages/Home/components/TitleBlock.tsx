@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { ArrowUpRight, Mail } from "lucide-react";
+import { ArrowUpRight, Download, Mail } from "lucide-react";
 import { EDUCATION, PROFILE } from "../../../data/profile";
 
 function Cell({ label, children }: { label: string; children: ReactNode }) {
@@ -42,13 +42,24 @@ export function TitleBlock() {
             applications, mobile solutions, and scalable backend architectures.
           </p>
 
-          <a
-            href={`mailto:${PROFILE.email}`}
-            className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-amber-400 px-6 py-3 text-sm font-semibold text-zinc-950 transition-colors duration-200 hover:bg-amber-300 sm:w-auto"
-          >
-            <Mail className="size-4" aria-hidden="true" />
-            Send an email
-          </a>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a
+              href={`mailto:${PROFILE.email}`}
+              className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-amber-400 px-6 py-3 text-sm font-semibold text-zinc-950 transition-colors duration-200 hover:bg-amber-300 sm:w-auto"
+            >
+              <Mail className="size-4" aria-hidden="true" />
+              Send an email
+            </a>
+
+            <a
+              href={PROFILE.resume}
+              download={PROFILE.resumeFileName}
+              className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-zinc-800 bg-zinc-900/70 px-6 py-3 text-sm font-medium text-zinc-200 transition-colors duration-200 hover:border-amber-400/50 hover:text-white sm:w-auto"
+            >
+              <Download className="size-4 text-amber-400" aria-hidden="true" />
+              Download resume
+            </a>
+          </div>
         </div>
 
         {/* Details — 6 cells, so the grid is always complete at 1, 2 or 3 columns */}

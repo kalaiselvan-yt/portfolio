@@ -6,6 +6,10 @@ export const PROFILE = {
   phoneDial: "+918754633467",
   email: "kalaiselvansk59@gmail.com",
   linkedin: "https://www.linkedin.com/in/kalaiselvans/",
+  // Files live in the /public folder. Replace them to update the site.
+  photo: "/profile.jpg",
+  resume: "/Kalaiselvan-S-Resume.pdf",
+  resumeFileName: "Kalaiselvan-S-Resume.pdf",
   summary:
     "I build enterprise web and mobile applications end to end — React and Flutter on the front end, Java/Vert.x and FastAPI underneath, PostgreSQL or MySQL holding it together. Two years in, currently shipping healthcare software; before that, livelihood-tech products from spec to Play Store.",
 };
